@@ -1,0 +1,12 @@
+server:
+  port: 8888
+  servlet:
+    context-path: /ives
+
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/ives?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    driverClassName: com.mysql.cj.jdbc.Driver
+    username: root
+    password: mz7758258
+    type: com.alibaba.druid.pool.DruidDataSource
