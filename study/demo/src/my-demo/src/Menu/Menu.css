@@ -1,0 +1,7 @@
+@import 'antd/dist/antd.css';
+
+.web-socket-wrapper {
+  width: 100px;
+  height: 100px;
+  background-color: antiquewhite;
+}
