@@ -1,3 +1,8 @@
 /study/demo/build
 /study/demo/.idea
 /study/demo/.gradle
+/.idea/ives.iml
+/.idea/modules.xml
+/.idea/vcs.xml
+/.idea/workspace.xml
+/ives-vue/.idea/misc.xml

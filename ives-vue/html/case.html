@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>tab切换</title>
+</head>
+<style type="text/css">
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    ul li {
+        float: left;
+        width: 80px;
+        text-align: center;
+        cursor: pointer;
+    }
+    .a1 .a1, .a2 .a2, .a3 .a3 {
+        background-color: red;
+    }
+    .cl {
+        clear: left;
+    }
+</style>
+<body>
+<div id="app">
+    <ul :class="{'a1': 'a1'==focus, 'a2': 'a2'==focus, 'a3': 'a3'==focus}">
+        <li :class="{'a1': 'a1'==focus}" @click="focus='a1'">1</li>
+        <li :class="{'a2': 'a2'==focus}" @click="focus='a2'">2</li>
+        <li :class="{'a3': 'a3'==focus}" @click="focus='a3'">3</li>
+    </ul>
+    <div class="cl"></div>
+    <div v-if="'a1'==focus">11</div>
+    <div v-if="'a2'==focus">22</div>
+    <div v-if="'a3'==focus">33</div>
+</div>
+</body>
+<script src="../js/vue.min.js"></script>
+<script type="text/javascript">
+   new Vue({
+      el: '#app',
+      data: {
+         focus: 'a1'
+      }
+   })
+</script>
+</html>

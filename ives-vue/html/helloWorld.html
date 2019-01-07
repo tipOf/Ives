@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>vue基础</title>
+</head>
+<style type="text/css">
+    .red {
+        color: red
+    }
+</style>
+<body>
+    <div id="app">
+        <input type="checkbox" v-model="showRed"/>是否显示红色字体
+        <div v-html="temp"
+             :class="{'red': showRed}">
+        </div>
+        <input type="text" v-model="str" />
+        <div v-if="showRed">{{str|reverse}}</div>
+        <ivescom message="明天雾霾很大"></ivescom>
+    </div>
+</body>
+    <script src="../js/vue.min.js"></script>
+    <script type="text/javascript">
+        new Vue({
+           el: '#app',
+           data: {
+              temp: '<b>hello world</b>',
+              showRed: true,
+              str: ''
+           },
+           filters: {
+              reverse: function(v) {
+                 return v.split('').reverse().join('');
+              }
+           },
+           components: {
+              'ivescom': {
+                 props: ['message'],
+                 template: '<h3>{{message}}</h3>'
+              }
+           }
+        })
+    </script>
+</html>
